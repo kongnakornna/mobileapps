@@ -36,7 +36,7 @@ import devsync.com.talentonlineandroid.view.AlertDialog;
 
 /**
  * Created by Thanisak Piyasaksiri on 3/19/2016 AD.
- * Modified by Thanisak Piyasaksiri on 3/20/2016 AD.
+ * Modified by Thanisak Piyasaksiri on 3/21/2016 AD.
  */
 public class SignInActivity extends AppCompatActivity implements View.OnClickListener, AlertDialog.AlertDialogListener, HttpConnectionListener {
 
@@ -124,7 +124,10 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                             model.setNoti_token(AppSharedPreferences.getInstance(SignInActivity.this.getApplicationContext()).getGCMRegisterToken());
 
                             setProgressbarVisibility(true);
-                            UtilHttpConnection.getInstance(SignInActivity.this).post(String.valueOf(APIs.LOGIN_FB.hashCode()), APIs.LOGIN_FB, APIs.getLoginFBAPIParam(model), SignInActivity.this);
+                            String api = APIs.getLoginFacebookAPI(model);
+                            Global.printLog(true, "login facebook", String.valueOf(api));
+                            UtilHttpConnection.getInstance(SignInActivity.this).get(String.valueOf(api.hashCode()), api, SignInActivity.this);
+                            //UtilHttpConnection.getInstance(SignInActivity.this).post(String.valueOf(APIs.LOGIN_FB.hashCode()), APIs.LOGIN_FB, APIs.getLoginFBAPIParam(model), SignInActivity.this);
                         }
                     }
 
@@ -193,7 +196,9 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
             model.setNoti_token(AppSharedPreferences.getInstance(this.getApplicationContext()).getGCMRegisterToken());
 
             setProgressbarVisibility(true);
-            UtilHttpConnection.getInstance(this).post(String.valueOf(APIs.LOGIN.hashCode()), APIs.LOGIN, APIs.getLoginAPIParam(model), this);
+            String api = APIs.getLoginAPI(model);
+            UtilHttpConnection.getInstance(this).get(String.valueOf(api.hashCode()), api, this);
+            //UtilHttpConnection.getInstance(this).post(String.valueOf(APIs.LOGIN.hashCode()), APIs.LOGIN, APIs.getLoginAPIParam(model), this);
 
         } else {
 
@@ -234,7 +239,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
     public void onHttpSuccess(String key, String data, AjaxStatus status) {
 
         setProgressbarVisibility(false);
-        Global.printLog(true, "SignInActivity", String.valueOf(data));
+        data = data.replace("\n", "").replace("\r", "");
 
         if(status.getCode() == 200) {
 

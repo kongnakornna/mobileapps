@@ -36,7 +36,7 @@ import devsync.com.talentonlineandroid.view.AlertDialog;
 
 /**
  * Created by Thanisak Piyasaksiri on 3/19/2016 AD.
- * Modified by Thanisak Piyasaksiri on 3/20/2016 AD.
+ * Modified by Thanisak Piyasaksiri on 3/21/2016 AD.
  */
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener, AlertDialog.AlertDialogListener, HttpConnectionListener {
 
@@ -203,7 +203,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 model.setNoti_token(AppSharedPreferences.getInstance(this.getApplicationContext()).getGCMRegisterToken());
 
                 setProgressbarVisibility(true);
-                UtilHttpConnection.getInstance(this).post(String.valueOf(APIs.REGISTER.hashCode()), APIs.REGISTER, APIs.getRegisterParam(model), this);
+                String api = APIs.getRegisterAPI(model);
+                Global.printLog(true, "getRegisterAPI", String.valueOf(api));
+                UtilHttpConnection.getInstance(this).get(String.valueOf(api.hashCode()), api, this);
+                //UtilHttpConnection.getInstance(this).post(String.valueOf(APIs.REGISTER.hashCode()), APIs.REGISTER, APIs.getRegisterParam(model), this);
 
             } else {
 
@@ -241,7 +244,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 model.setNoti_token(AppSharedPreferences.getInstance(this.getApplicationContext()).getGCMRegisterToken());
 
                 setProgressbarVisibility(true);
-                UtilHttpConnection.getInstance(this).post(String.valueOf(APIs.REGISTER_FB.hashCode()), APIs.REGISTER_FB, APIs.getRegisterFBParam(model), this);
+                String api = APIs.getRegisterFacebookAPI(model);
+                Global.printLog(true, "getRegisterFacebookAPI", String.valueOf(api));
+                UtilHttpConnection.getInstance(this).get(String.valueOf(api.hashCode()), api, this);
+                //UtilHttpConnection.getInstance(this).post(String.valueOf(APIs.REGISTER_FB.hashCode()), APIs.REGISTER_FB, APIs.getRegisterFBParam(model), this);
 
             } else {
 
@@ -287,8 +293,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     public void onHttpSuccess(String key, String data, AjaxStatus status) {
 
         setProgressbarVisibility(false);
+        data = data.replace("\n", "").replace("\r", "");
 
-        Global.printLog(true, "RegisterActivity", String.valueOf(data));
         if(status.getCode() == 200) {
 
             if(!data.trim().equalsIgnoreCase("")) {

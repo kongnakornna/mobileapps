@@ -9,6 +9,7 @@ import devsync.com.talentonlineandroid.listener.HttpConnectionListener;
 
 /**
  * Created by Thanisak Piyasaksiri on 3/19/2016 AD.
+ * Modified by Thanisak Piyasaksiri on 3/21/2016 AD.
  */
 public class UtilHttpConnection {
 
