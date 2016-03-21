@@ -1,0 +1,36 @@
+<resources>
+
+    <string name="app_name">Tarent Online</string>
+    <string name="facebook_app_id">101839540215389</string>
+
+    <string name="btn_join_now">Join now</string>
+    <string name="btn_sign_in">Sign In</string>
+
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_mobile">Mobile</string>
+
+    <string name="login_text_001">or</string>
+    <string name="login_text_002">Forget Password?</string>
+
+    <string name="register_text_001">First Name</string>
+    <string name="register_text_002">Last Name</string>
+    <string name="register_text_003">By click join now. you agree to User Agreement and Privacy Policy</string>
+    <string name="register_text_004">Already have an account?</string>
+    <string name="register_text_005">If you haven\'t a Tarent Account.</string>
+
+    <string name="home_tab_001">Home</string>
+    <string name="home_tab_002">Job Match</string>
+    <string name="home_tab_003">Me</string>
+    <string name="home_tab_004">Message</string>
+    <string name="home_tab_005">Search</string>
+
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
+
+    <string name="alert_backpress">Press once again to exit!</string>
+    <string name="alert_miss_input">กรุณากรอกข้อมูลให้ถูกต้องด้วยค่ะ</string>
+    <string name="alert_system_error">ระบบมีปัญหา กรุณาลองใหม่อีกครั้งค่ะ</string>
+    <string name="alert_login_miss_input">กรุณาระบุอีเมล และรหัสผ่านให้ถูกต้องด้วยค่ะ</string>
+
+</resources>

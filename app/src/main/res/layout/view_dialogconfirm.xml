@@ -1,0 +1,68 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    >
+
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:text="@string/app_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            style="@style/TextDrawer.Widget.AlertTextLabeltitle"
+            />
+
+        <TextView
+            android:id="@+id/view_alert_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            style="@style/TextDrawer.Widget.AlertTextLabeltitle"
+            />
+
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            >
+
+            <TextView
+                android:padding="16dp"
+                android:id="@+id/view_alert_btn_cancel"
+                android:text="@string/button_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                style="@style/TextDrawer.Widget.AlertBtnLabeltitle"
+                />
+
+            <TextView
+                android:padding="16dp"
+                android:id="@+id/view_alert_btn_ok"
+                android:text="@string/button_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@color/white"
+                style="@style/TextDrawer.Widget.AlertBtnLabeltitle"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

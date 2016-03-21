@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/com_facebook_button_background_color_disabled"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/login_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="@dimen/activity_padding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/login_toolbar"
+        >
+
+        <EditText
+            android:id="@+id/login_edit_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_edittext_login"
+            style="@style/TextDrawer.Widget.EditTextEmail"
+            />
+
+        <EditText
+            android:id="@+id/login_edit_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/bg_edittext_login"
+            style="@style/TextDrawer.Widget.EditTextPassword"
+            />
+
+        <Button
+            android:padding="10dp"
+            android:id="@+id/login_btn_signin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/btn_sign_in"
+            android:textAllCaps="true"
+            android:background="@color/colorPrimary"
+            style="@style/TextDrawer.Widget.BtnJoinNow"
+            />
+
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/login_text_001"
+            style="@style/TextDrawer.Widget.LoginText"
+            />
+
+        <com.facebook.login.widget.LoginButton
+            android:padding="10dp"
+            android:id="@+id/login_btn_facebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextDrawer.Widget.BtnJoinNow"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/login_btn_forgetpassword"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/login_text_002"
+                style="@style/TextDrawer.Widget.LoginText2"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_text_005"
+                    style="@style/TextDrawer.Widget.LoginText2"
+                    />
+
+                <TextView
+                    android:id="@+id/login_btn_register"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_join_now"
+                    android:textColor="@color/colorPrimary"
+                    style="@style/TextDrawer.Widget.LoginText2"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/login_progress_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/login_toolbar"
+        android:background="@color/black_transparent_100"
+        android:visibility="gone"
+        >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
