@@ -125,7 +125,6 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
                             setProgressbarVisibility(true);
                             String api = APIs.getLoginFacebookAPI(model);
-                            Global.printLog(true, "login facebook", String.valueOf(api));
                             UtilHttpConnection.getInstance(SignInActivity.this).get(String.valueOf(api.hashCode()), api, SignInActivity.this);
                             //UtilHttpConnection.getInstance(SignInActivity.this).post(String.valueOf(APIs.LOGIN_FB.hashCode()), APIs.LOGIN_FB, APIs.getLoginFBAPIParam(model), SignInActivity.this);
                         }
@@ -240,6 +239,10 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
         setProgressbarVisibility(false);
         data = data.replace("\n", "").replace("\r", "");
+
+        int index_begin_json = data.indexOf("{");
+        if(index_begin_json > 0)
+            data = data.substring(index_begin_json, data.length());
 
         if(status.getCode() == 200) {
 

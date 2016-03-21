@@ -25,6 +25,14 @@
         android:layout_below="@id/login_toolbar"
         >
 
+        <com.facebook.login.widget.LoginButton
+            android:padding="10dp"
+            android:id="@+id/login_btn_facebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextDrawer.Widget.BtnJoinNow"
+            />
+
         <EditText
             android:id="@+id/login_edit_username"
             android:layout_width="match_parent"
@@ -58,7 +66,7 @@
             style="@style/TextDrawer.Widget.BtnJoinNow"
             />
 
-        <TextView
+        <!--TextView
             android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -73,7 +81,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/TextDrawer.Widget.BtnJoinNow"
-            />
+            /-->
 
         <RelativeLayout
             android:layout_width="match_parent"

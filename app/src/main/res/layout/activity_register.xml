@@ -25,6 +25,14 @@
         android:layout_below="@id/register_toolbar"
         >
 
+        <com.facebook.login.widget.LoginButton
+            android:padding="10dp"
+            android:id="@+id/register_btn_facebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextDrawer.Widget.BtnJoinNow"
+            />
+
         <EditText
             android:id="@+id/register_edit_firstname"
             android:layout_width="match_parent"
@@ -100,7 +108,7 @@
             style="@style/TextDrawer.Widget.BtnJoinNow"
             />
 
-        <TextView
+        <!--TextView
             android:padding="10dp"
             android:id="@+id/register_text_or"
             android:layout_width="wrap_content"
@@ -117,7 +125,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/TextDrawer.Widget.BtnJoinNow"
-            />
+            /-->
 
         <LinearLayout
             android:orientation="horizontal"

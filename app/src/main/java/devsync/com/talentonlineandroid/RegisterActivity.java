@@ -126,7 +126,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
                             aq.id(R.id.register_edit_email).enabled(false);
                             aq.id(R.id.register_edit_password).visibility(View.GONE);
-                            aq.id(R.id.register_text_or).visibility(View.GONE);
+                            //aq.id(R.id.register_text_or).visibility(View.GONE);
                             register_btn_facebook.setVisibility(View.GONE);
 
                             //setProgressbarVisibility(true);
@@ -204,7 +204,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
                 setProgressbarVisibility(true);
                 String api = APIs.getRegisterAPI(model);
-                Global.printLog(true, "getRegisterAPI", String.valueOf(api));
                 UtilHttpConnection.getInstance(this).get(String.valueOf(api.hashCode()), api, this);
                 //UtilHttpConnection.getInstance(this).post(String.valueOf(APIs.REGISTER.hashCode()), APIs.REGISTER, APIs.getRegisterParam(model), this);
 
@@ -245,7 +244,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
                 setProgressbarVisibility(true);
                 String api = APIs.getRegisterFacebookAPI(model);
-                Global.printLog(true, "getRegisterFacebookAPI", String.valueOf(api));
                 UtilHttpConnection.getInstance(this).get(String.valueOf(api.hashCode()), api, this);
                 //UtilHttpConnection.getInstance(this).post(String.valueOf(APIs.REGISTER_FB.hashCode()), APIs.REGISTER_FB, APIs.getRegisterFBParam(model), this);
 
@@ -294,6 +292,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         setProgressbarVisibility(false);
         data = data.replace("\n", "").replace("\r", "");
+
+        data = data.replace("\n", "").replace("\r", "");
+
+        int index_begin_json = data.indexOf("{");
+        if(index_begin_json > 0)
+            data = data.substring(index_begin_json, data.length());
 
         if(status.getCode() == 200) {
 
