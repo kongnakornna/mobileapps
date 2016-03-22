@@ -10,20 +10,20 @@ import devsync.com.talentonlineandroid.model.BeanRegisterParam;
 
 /**
  * Created by Thanisak Piyasaksiri on 3/19/2016 AD.
- * Modified by Thanisak Piyasaksiri on 3/21/2016 AD.
+ * Modified by Thanisak Piyasaksiri on 3/22/2016 AD.
  */
 public class APIs {
 
-    public static final String LOGIN = "http://call4jobz.com/mobile/check_login";
-    public static final String LOGIN_FB = "http://call4jobz.com/mobile/check_login_fackbook";
-    public static final String REGISTER = "http://call4jobz.com/mobile/register_login";
-    public static final String REGISTER_FB = "http://call4jobz.com/mobile/register";
+    public static final String LOGIN = "http://www.talentonline.com/mobile/check_login";
+    public static final String LOGIN_FB = "http://www.talentonline.com/mobile/check_login_fackbook";
+    public static final String REGISTER = "http://www.talentonline.com/mobile/register_login";
+    public static final String REGISTER_FB = "http://www.talentonline.com/mobile/register_facebookid";
 
-    public static final String WEBVIEW_URL_HOME = "http://call4jobz.com/";
-    public static final String WEBVIEW_URL_JOBMATCH = "http://call4jobz.com/mobile/matchjob/";
-    public static final String WEBVIEW_URL_ME = "http://call4jobz.com/mobile/me/";
-    public static final String WEBVIEW_URL_MESSAGE = "http://call4jobz.com/mobile/message/";
-    public static final String WEBVIEW_URL_SEARCH = "http://call4jobz.com/mobile/search/";
+    public static final String WEBVIEW_URL_HOME = "http://www.talentonline.com/";
+    public static final String WEBVIEW_URL_JOBMATCH = "http://www.talentonline.com/mobile/matchjob/";
+    public static final String WEBVIEW_URL_ME = "http://www.talentonline.com/mobile/me/";
+    public static final String WEBVIEW_URL_MESSAGE = "http://www.talentonline.com/mobile/message/";
+    public static final String WEBVIEW_URL_SEARCH = "http://www.talentonline.com/mobile/search/";
 
     public static String getLoginAPI(BeanLoginParam model) {
 
