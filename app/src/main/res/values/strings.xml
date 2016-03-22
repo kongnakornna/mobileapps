@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">Tarent Online</string>
+    <string name="app_name">Talent Online</string>
     <string name="facebook_app_id">101839540215389</string>
 
     <string name="btn_join_now">Join now</string>
@@ -17,7 +17,7 @@
     <string name="register_text_002">Last Name</string>
     <string name="register_text_003">By click join now. you agree to User Agreement and Privacy Policy</string>
     <string name="register_text_004">Already have an account?</string>
-    <string name="register_text_005">If you haven\'t a Tarent Account.</string>
+    <string name="register_text_005">If you haven\'t a Talent Account.</string>
 
     <string name="home_tab_001">Home</string>
     <string name="home_tab_002">Job Match</string>
