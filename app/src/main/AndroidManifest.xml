@@ -52,13 +52,15 @@
 
         <meta-data
             android:name="io.fabric.ApiKey"
-            android:value="f8ce2fbc47f5e4c5069d5d0563f556b56530fcab" />
-    </application>
+            android:value="f8ce2fbc47f5e4c5069d5d0563f556b56530fcab"
+            />
 
-    <provider
-        android:authorities="com.facebook.app.FacebookContentProvider101839540215389"
-        android:name="com.facebook.FacebookContentProvider"
-        android:exported="true"
-        />
+        <provider
+            android:authorities="com.facebook.app.FacebookContentProvider101839540215389"
+            android:name="com.facebook.FacebookContentProvider"
+            android:exported="true"
+            />
+
+    </application>
 
 </manifest>
